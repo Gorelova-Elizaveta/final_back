@@ -8,7 +8,7 @@ class Users::SessionsController < Devise::SessionsController
      if current_user then
       render json: { user: current_user }, status: :ok
     else
-      render json: { message: 'You are not logged in.' }, status: :ok
+      render json: { message: 'You are not logged in.' }, status: :Forbidden
      end
     end
   
